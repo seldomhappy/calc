@@ -1,50 +1,15 @@
 <?php
 
-interface lion
-{
-    public function roar();
-}
+namespace Patterns\Structural\Adapter;
 
-class AfricanLion implements Lion
-{
-    public function roar()
-    {
-    }
-}
-
-class AsianLion implements Lion
-{
-    public function roar()
-    {
-    }
-}
-
-class Hunter
-{
-    public function hunt(Lion $lion)
-    {
-    }
-}
+chdir(dirname(__DIR__, 4));
+require 'vendor/autoload.php';
 
 class WildDog
 {
+
     public function bark()
     {
-    }
-}
-
-class WildDogAdapter implements Lion
-{
-    protected $dog;
-
-    public function __construct(WildDog $dog)
-    {
-        $this->dog = $dog;
-    }
-
-    public function roar()
-    {
-        $this->dog->bark();
     }
 }
 

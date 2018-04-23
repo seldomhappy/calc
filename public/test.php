@@ -1,18 +1,5 @@
 <?php
-$json = file_get_contents('test_users.json');
-$obj = json_decode($json);
 
-$csv = [];
-for ($i = 0, $count = count($obj); $i < $count; ++$i) {
-    if ($obj[$i]->group_id == 2) $csv[] = $obj[$i]->last_name;
-}
-
-$fp = fopen('test.csv', 'a');
-fputcsv($fp, $csv);
-fclose($fp);
-
-
-die;
 $arr = [-5, 6, 7, -2, -1, 0, 1, 2, 3, 4, 5];
 
 function insertionSort(array $a): array
@@ -35,6 +22,5 @@ for ($i = 0; $i < count($arr); $i++):
         endif;
     endfor;
 endfor;
-
 
 echo implode(' ', insertionSort($arr));

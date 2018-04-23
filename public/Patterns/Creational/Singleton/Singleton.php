@@ -1,5 +1,10 @@
 <?php
 
+namespace Patterns\Creational\Singleton;
+
+chdir(dirname(__dir__, 4));
+require 'vendor/autoload.php';
+
 final class Singleton
 {
     private static $instance;
@@ -30,4 +35,4 @@ final class Singleton
 $singleton1 = Singleton::getInstance();
 $singleton2 = Singleton::getInstance();
 
-var_dump($singleton1, $singleton2);
+var_dump($singleton1 === $singleton2);

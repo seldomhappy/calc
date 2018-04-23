@@ -68,9 +68,10 @@ class AquaTheme implements Theme
 }
 
 $darkTheme = new DarkTheme();
+$aquaTheme = new AquaTheme();
 
 $about = new About($darkTheme);
-$careers = new Careers($darkTheme);
+$careers = new Careers($aquaTheme);
 
 echo $about->getContent() . PHP_EOL;
 echo $careers->getContent() . PHP_EOL;
