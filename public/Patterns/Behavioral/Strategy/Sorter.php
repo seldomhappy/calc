@@ -29,10 +29,13 @@ class Sorter
 }
 
 $dataSet = [1, 5, 4, 3, 2, 8, -3];
+
 $countOfArrayElements = count($dataSet);
 
-$sorter = ($countOfArrayElements < 99)
+$sorter = $countOfArrayElements < 99
     ? new BubbleSortStrategy()
     : new QuickSortStrategy();
 
-echo implode(' ', $sorter->sort($dataSet));
+$start = microtime(true);
+$sorter->sort($dataSet);
+echo round(microtime(true) - $start, 5);

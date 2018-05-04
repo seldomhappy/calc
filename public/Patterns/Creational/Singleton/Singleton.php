@@ -29,7 +29,6 @@ final class Singleton
 
         return self::$instance;
     }
-
 }
 
 $singleton1 = Singleton::getInstance();

@@ -2,7 +2,7 @@
 
 namespace Patterns\Behavioral\Strategy;
 
-class BubbleSortStrategy implements SortStrategy
+class BubbleSortStrategy extends AbstractSortStrategy
 {
     public function sort(array $dataSet): array
     {
@@ -13,6 +13,7 @@ class BubbleSortStrategy implements SortStrategy
                 }
             }
         }
+
         return $dataSet;
     }
 }

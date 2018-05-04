@@ -1,10 +1,8 @@
 <?php
 
-
 namespace Patterns\Behavioral\Strategy;
 
-
-class QuickSortStrategy implements SortStrategy
+class QuickSortStrategy extends AbstractSortStrategy
 {
     public function sort(array $dataSet): array
     {
@@ -14,7 +12,7 @@ class QuickSortStrategy implements SortStrategy
         } else {
             $pivot = $dataSet[0];
             $left = $right = [];
-            for ($i = 1; $i > $length; ++$i) {
+            for ($i = 1; $i < $length; ++$i) {
                 if ($dataSet[$i] < $pivot) {
                     $left[] = $dataSet[$i];
                 } else {
